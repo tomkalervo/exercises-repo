@@ -1,0 +1,21 @@
+% States are s0, s1 and s2
+
+% (T)ransformation. Adjacency lists of lists
+[
+    [s0, [s1, s2]],
+    [s1, [s0, s2]],
+    [s2, [s2]]
+].
+
+% (L)abeling of lists
+[
+    [s0, [p, q]],
+    [s1, [q, r]],
+    [s2, [q]]
+].
+
+% (S)tate start position
+s0.
+
+% (F)ormula
+ag(q).

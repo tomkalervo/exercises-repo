@@ -1,0 +1,32 @@
+% (T)ransformation. Adjacency lists of lists
+[
+    [s0, [s1, s2]],
+    [s1, [s2, s3, s4]],
+    [s2, [s1, s3, s4]],
+    [s3, [s0, s4]],
+    [s4, [s5]],
+    [s5, [s1, s2, s3]]
+].
+
+% (L)abeling of lists
+[
+    [s0, [load,weak]],
+    [s1, [drive,cut]],
+    [s2, [drive]],
+    [s3, [drive,weak]],
+    [s4, [obs,oor]],
+    [s5, [turn]]
+].
+
+% (S)tate start position
+s2.
+
+% (F)ormula 1 - AGEX((load or EX(load)))
+% For all paths there exists a next state, or a second 
+% next state, that recharges the robot (false because of state s4)
+
+%ag(ex(or( load, ex(load) ))).
+
+% (F)ormula 2 - AGAF(drive)
+% The robot will be driving infinitely many times
+ ag( af(drive) ).

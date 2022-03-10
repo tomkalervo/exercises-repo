@@ -1,0 +1,2 @@
+# Philosophers - concurrency programming
+This exercise is about 5 philosophers sharing 5 chopsticks. At random intervals they wake up from their dream state and wants to eat. They request their left and right chopstick - if they are granted the sticks they can eat, otherwise they have to wait or give up.
